@@ -1,9 +1,8 @@
-import Hello from "../../Components/Hello/Hello";
+import NavBar from "../Components/NavBar/NavBar";
 
 function Home() {
   return (
     <>
-      <Hello></Hello>
       <div>Home</div>
     </>
   );
