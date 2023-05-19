@@ -10,13 +10,7 @@ export const pages = [Write, Tables, Options, About];
 export function Public() {
   const renderRoutes = (array) => {
     return array.map((a, i) => {
-      return (
-        <Route
-          key={a().props.children + i}
-          path={`/${a().props.children}`}
-          element={a()}
-        ></Route>
-      );
+      return <Route key={i} path={`/${a().props.data}`} element={a()}></Route>;
     });
   };
 

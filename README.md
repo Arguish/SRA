@@ -45,6 +45,12 @@ With this comprehensive set of features, this application empowers writers and s
 
 ---
 
+## Aditional things
+
+- [React Markdown](https://www.npmjs.com/package/react-markdown)
+
+---
+
 ## About me:
 
 "Hey! I'm a bundle of experiences and curiosities. I've directed short films, which has given me an outstanding creative and storytelling vision. And when it comes to solving problems, my mind always thinks 'out of the box'. Routine tasks may not be my strong suit, but when a fresh solution is needed for new or old problems, I'm your guy! I also love diving into the world of video game development, board games, and the thrilling realm of role-playing. I can proudly say that fun is my driving force at work. So, if you're looking for a professional with expertise in design, audiovisual realm, and a spark of creativity, I'm here to work magic together!"

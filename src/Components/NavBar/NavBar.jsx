@@ -8,8 +8,8 @@ const NavBar = () => {
       return (
         <GotoBtn
           key={i}
-          url={`/${a().props.children}`}
-          title={a().props.children}
+          url={`/${a().props.data}`}
+          title={a().props.data}
         ></GotoBtn>
       );
     });
@@ -20,6 +20,13 @@ const NavBar = () => {
       <div style={mainMenuStyle}>
         <GotoBtn url={"/"} title={"Menú"}></GotoBtn>
         {menuCreator(pages)}
+        <a href="https://ko-fi.com/P5P6LEMUF" target="_blank">
+          <img
+            style={{ border: "0px", padding: "0px", height: "50px" }}
+            src="https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png"
+            alt="Buy Me a Coffee at ko-fi.com"
+          />
+        </a>
       </div>
     </>
   );
