@@ -1,5 +1,4 @@
 import { BrowserRouter } from "react-router-dom";
-import "./App.css";
 import Public from "./Routes/Public/Public";
 import ContextProvider from "./Context/Context/ContextProvider";
 
