@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
-import Dice from "../Components/Dice/Dice";
+import { Dice, useDice } from "../Components/Dice/Dice";
+import { RandomTable, useTable } from "../Components/RandomTable/RandomTable";
 
 const Write = () => {
   const [inputText, setinputText] = useState("");
   const [chat, setchat] = useState([]);
+  const [item, roll] = useTable(["Si", "No", "Si, pero...", "No, pero..."]);
+  const d4 = useDice(4);
+  const d6 = useDice(6);
+  const d8 = useDice(8);
+  const d10 = useDice(10);
+  const d12 = useDice(12);
+  const d20 = useDice(20);
+  const d100 = useDice(100);
 
   const handleText = (str) => {
     setinputText(str.target.value);
@@ -57,9 +66,20 @@ const Write = () => {
       <div style={usetZoneStyle}>
         <h1>cosas activas</h1>
         <div style={inputSyleDiv}>
-          <h1>Tablas/Cartas</h1>
+          <div>
+            <RandomTable item={item}></RandomTable>
+            <button onClick={roll}>Roll</button>
+          </div>
           {rednerInput()}
-          <Dice faces={6}></Dice>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <Dice faces={d4}></Dice>
+            <Dice faces={d6}></Dice>
+            <Dice faces={d8}></Dice>
+            <Dice faces={d10}></Dice>
+            <Dice faces={d12}></Dice>
+            <Dice faces={d20}></Dice>
+            <Dice faces={d100}></Dice>
+          </div>
         </div>
       </div>
     </div>

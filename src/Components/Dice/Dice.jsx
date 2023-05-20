@@ -1,32 +1,42 @@
 import React from "react";
 
-const Dice = ({ faces }) => {
-  const [dice, rollDice] = useDice(Number(faces));
+export const Dice = ({ faces }) => {
   return (
     <div
       style={{
         userSelect: false,
-        mouseCursor: "pointer",
+        cursor: "pointer",
+        height: "50px",
         aspectRatio: "1/1",
         display: "flex",
         flexDirection: "column",
         justifyContent: "end",
       }}
-      onClick={rollDice}
+      onClick={faces[1]}
     >
-      <h1 style={{ margin: "0px", alignSelf: "center" }}>{dice}</h1>
-      <h6 style={{ margin: "0px", textAlign: "end" }}>Roll! d{faces}</h6>
+      <h1
+        style={{
+          margin: "0px",
+          alignSelf: "center",
+          userSelect: false,
+          fontSize: "29px",
+        }}
+      >
+        {faces[0]}
+      </h1>
+      <h6 style={{ margin: "0px", textAlign: "end", userSelect: false }}>
+        Roll! d{faces[2]}
+      </h6>
     </div>
   );
 };
 
-export default Dice;
-
-const useDice = (num) => {
-  const [result, setresult] = React.useState(0);
+export const useDice = (num) => {
+  const max = num;
+  const [result, setresult] = React.useState(max);
 
   const roll = () => {
-    setresult(Math.ceil(Math.random() * Number(num)));
+    setresult(Math.ceil(Math.random() * Number(max)));
   };
-  return [result, roll];
+  return [result, roll, max];
 };
