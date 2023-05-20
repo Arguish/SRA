@@ -30,7 +30,7 @@ const Write = () => {
     return (
       <div style={chatStyle}>
         {array.map((a, i) => (
-          <ReactMarkdown key={i} children={a} />
+          <h5 key={i}>{a}</h5>
         ))}
       </div>
     );
@@ -39,7 +39,7 @@ const Write = () => {
   const renderPreview = (str) => {
     return (
       <div style={previewStyle}>
-        <ReactMarkdown children={str} />
+        <h5 key={i}>{str}</h5>
       </div>
     );
   };
@@ -66,9 +66,19 @@ const Write = () => {
       <div style={usetZoneStyle}>
         <h1>cosas activas</h1>
         <div style={inputSyleDiv}>
-          <div>
+          <div
+            style={{
+              aspectRatio: "1/1",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              userSelect: "none",
+              cursor: "pointer",
+              textAlign: "center",
+            }}
+            onClick={roll}
+          >
             <RandomTable item={item}></RandomTable>
-            <button onClick={roll}>Roll</button>
           </div>
           {rednerInput()}
           <div style={{ display: "flex", flexWrap: "wrap" }}>
