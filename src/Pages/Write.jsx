@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
-import GotoBtn from "../Components/GotoBtn/GotoBtn";
+import Dice from "../Components/Dice/Dice";
 
 const Write = () => {
   const [inputText, setinputText] = useState("");
@@ -59,7 +59,7 @@ const Write = () => {
         <div style={inputSyleDiv}>
           <h1>Tablas/Cartas</h1>
           {rednerInput()}
-          <h1>Dados</h1>
+          <Dice faces={6}></Dice>
         </div>
       </div>
     </div>
